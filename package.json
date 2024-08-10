@@ -16,10 +16,22 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
+    "languages": [
       {
-        "command": "extension.foldSelection",
-        "title": "Get Selection Range"
+        "id": "plaintext",
+        "aliases": [
+          "Plain Text",
+          "plaintext"
+        ],
+        "extensions": [
+          ".txt"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "foldingRangeProvider": [
+      {
+        "language": "plaintext"
       }
     ]
   },
